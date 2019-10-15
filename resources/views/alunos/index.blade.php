@@ -63,7 +63,7 @@
                         @endforeach
                     </tbody>
                 </table>
-                    <a class="btn btn-light border border-dark text-light"id="Hcolor" href="{{ route('alunos.create') }}" role="button">Adicionar</a>
+                    <a class="btn btn-light border border-dark text-white"id="Hcolor" href="{{ route('alunos.create') }}" role="button">Adicionar</a>
             </div>
         </div>
 

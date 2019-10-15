@@ -4,14 +4,15 @@
     @section('content')
         @if (Auth::user()->Tipos == 'Gerente')
             <div class="container" align="center">
+            
                 <h3>Relatório de Inadimplencia:</h3>
                 <div class="row">
                     <div class="input-group">
-                        <span id="widthFix" class="input-group-text mb-1 col-sm-2">Início de vencimento:</span>
+                        <span id="widthFix" class="input-group-text mb-1 ml-3 col-sm-2">Início de vencimento:</span>
                         <input id="dataIni" class="form-control mr-5" type="text" value="{{$dIni}}" disabled>
                         <span id="widthFix" class="input-group-text mb-1 col-sm-2">Final de vencimento:</span>              
                         <input id="dataFin"  class="form-control  mr-5" type="text" value="{{$dFin}}" disabled>
-                        <a role="button" href="{{ route('relatorios.index') }}" class="col-sm-1 btn badge-pill mb-1 ml-1 btn-danger">Cancelar</a>
+                        <a role="button" href="{{ route('relatorios.index') }}" class="col-sm-1 btn badge-pill mb-1 mr-3 btn-danger">Cancelar</a>
                         </div>
                 </div>
                 <div>

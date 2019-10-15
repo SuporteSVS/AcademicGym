@@ -30,8 +30,8 @@
                                     <h2>Alunos</h2>
                                 </div>
                                 <div class="card-body">
-                                    <p>Acesso à página de Alunos.</p>
-                                    <a class="btn btn-outline-dark text-light" role="button"id="Hcolor" href="{{ route('alunos.index') }}">Acessar!</a>
+                                    <p>Acesso a página de Alunos.</p>
+                                    <a class="btn btn-outline-dark text-white" role="button"id="Hcolor" href="{{ route('alunos.index') }}">Acessar!</a>
                                 </div>
                             </div>
                         </div>
@@ -43,8 +43,8 @@
                                     <h2>Instrutores</h2>
                                 </div>
                                 <div class="card-body">
-                                    <p>Acesso à página de Instrutores.</p>
-                                    <a class="btn btn-outline-dark text-light" role="button"id="Hcolor" href="{{ route('instrutores.index') }}">Acessar!</a>
+                                    <p>Acesso a página de Instrutores.</p>
+                                    <a class="btn btn-outline-dark text-white" role="button"id="Hcolor" href="{{ route('instrutores.index') }}">Acessar!</a>
                                 </div>
                             </div>
                         </div>
