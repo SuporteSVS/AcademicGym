@@ -13,8 +13,8 @@
                             <input class="form-control mr-5" type="date" name="dataInicial">
                             <span id="widthFix" class="input-group-text col-sm-2">Final de vencimento:</span>              
                             <input class="form-control mr-5" type="date" name="dataFinal">
-                            <button type="submit" class="col-sm-1 btn badge-pill btn-sm mr-1 btn-success">Confirma</button>
-                            <button type="reset" class="col-sm-1 btn badge-pill btn-sm ml-1 btn-danger">Cancela</button>
+                            <button type="submit" class="col-sm-1 btn badge-pill  mr-1 btn-success">Confirma</button>
+                            <a role="button" href="{{ url('/') }}" class="col-sm-1 btn badge-pill ml-1 btn-danger">Cancela</a>
                         </div>
                     </div>                
                 </div>

@@ -7,15 +7,15 @@
                 <h3>Relatório de Inadimplencia:</h3>
                 <div class="row">
                     <div class="input-group">
-                        <span id="widthFix" class="input-group-text col-sm-2">Início de vencimento:</span>
+                        <span id="widthFix" class="input-group-text mb-1 col-sm-2">Início de vencimento:</span>
                         <input id="dataIni" class="form-control mr-5" type="text" value="{{$dIni}}" disabled>
-                        <span id="widthFix" class="input-group-text col-sm-2">Final de vencimento:</span>              
-                        <input id="dataFin"  class="form-control mr-5" type="text" value="{{$dFin}}" disabled>
-                        <button type="submit" class="col-sm-1 btn badge-pill mb-1 btn-sm ml-1 btn-danger">Cancela</button>
-                    </div>
+                        <span id="widthFix" class="input-group-text mb-1 col-sm-2">Final de vencimento:</span>              
+                        <input id="dataFin"  class="form-control  mr-5" type="text" value="{{$dFin}}" disabled>
+                        <a role="button" href="{{ route('relatorios.index') }}" class="col-sm-1 btn badge-pill mb-1 ml-1 btn-danger">Cancelar</a>
+                        </div>
                 </div>
                 <div>
-                    <table class="table table-striped table-responsive-md table-bordered bordered-dark table-light">
+                    <table class="table table-striped table-responsive-md mt-1 table-bordered bordered-dark table-light">
                         <thead id="Hcolor">
                             <tr>
                                 <th scope="col">Matricula</th>
@@ -26,14 +26,26 @@
                         </thead>
                         <!-- Dados de identificação -->
                         <tbody>
+                            <?php $n_total = 0?>
                             @foreach($pagamentos as $pagamento)
                                 <tr>
+
+                                    <?php $data_formatada = date_format(date_create($pagamento->DataVenc),"d/m/Y") ?>
+
                                     <td>{{ $pagamento->aluno_Matricula }}</td>
                                     <td>{{ $pagamento->Nome }}</td>
-                                    <td><? date_format( ?>{{ $pagamento->DataVenc }} <?, "d-m-Y")?></td>
+                                    <td>{{ $data_formatada}}  </td>
                                     <td>{{ $pagamento->Valor }}</td>
+                                    <?php $n_total = $n_total +  $pagamento->Valor ?>
+
                                 </tr>
                             @endforeach
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td>Total : </td>
+                                <td>{{ $n_total }}</td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>

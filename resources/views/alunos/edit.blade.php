@@ -5,7 +5,7 @@
     @if (Auth::user()->Tipos == 'Recepcionista')
 
         <div align="center">
-         <h3 class="w-74" >Atualizar de Instrutor</h3>
+         <h3 class="w-74" >Edição de Aluno</h3>
             <div class="container col-7  bg-light"  >
                 <form action="{{ route('alunos.update', ['aluno'=>$alunos->Matricula]) }}" class="form-horizontal" method="POST">
 

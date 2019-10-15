@@ -5,8 +5,7 @@
     @if (Auth::user()->Tipos == 'Recepcionista')
 
         <div align="center">
-         <h3 class="w-75" >Cadastro de Instrutor</h3>
-         <h6>Campos com "*" são obrigatórios</h6>
+            <h3 class="w-75" >Cadastro de Instrutor</h3>
             <div class="container col-7  bg-light"  >
                 <form action="{{ route('instrutores.store') }}" class="form-horizontal" method="POST" >
 
@@ -17,14 +16,14 @@
                             <form class="input-group" >
                                 <div class=" input-group mb-1">
                                     <div class="input-group">
-                                        <span id="widthFix"  class="input-group-text">*Nome:</span>
+                                        <span id="widthFix"  class="input-group-text">Nome:</span>
                                         <input type="text"  size="74" name="Nome">
                                     </div>
                                 </div>
 
                                 <div class="input-group mb-1">
                                     <div class="input-group">
-                                        <span id="widthFix" class="input-group-text ">*CPF: </span>
+                                        <span id="widthFix" class="input-group-text ">CPF: </span>
                                         <input type="text" size="20" maxlength="14" name="CPF"
                                         placeholder="000.000.000-00">
                                     </div>
@@ -32,7 +31,7 @@
 
                                 <div class="input-group mb-1">
                                     <div class="input-group">
-                                        <span id="widthFix" class="input-group-text ">*Identidade: </span>
+                                        <span id="widthFix" class="input-group-text ">Identidade: </span>
                                         <input type="text"  maxlength="12"  size="20" name="Identidade"
                                         placeholder="00.000.000/0">
                                     </div>
@@ -40,7 +39,7 @@
 
                                 <div class="input-group mb-1">
                                     <div class="input-group mb-4">
-                                        <span id="widthFix"  class="input-group-text">*Tipo de Aula: </span>
+                                        <span id="widthFix"  class="input-group-text">Tipo de Aula: </span>
                                         <select id="widthFix-select" name="tp_Aula" >
                                             <option>Grupo</option>
                                             <option>Musculação</option>
@@ -50,13 +49,12 @@
                                 </div>
 
                                 <div class="row ">
-                                    <div class="col-2 "></div>
-                                        <button type="submit"  class="col-3 btn badge-pill btn-sm border-dark btn-success">Cadastrar</button>
+                                        <div class="col-2 "></div>
+                                    <button type="submit"  class="col-3 btn badge-pill btn-sm border-dark btn-success">Cadastrar</button>
                                             <div class="col-2"></div>
-                                        <a class="col-3 btn badge-pill btn-danger btn-sm border border-dark"
-                                        href="{{ route('instrutores.index') }}" role="button">Cancelar</a>
-                                        <div class="col-2"></div>
-                                    </div>
+                                    <a class="col-3 btn badge-pill btn-danger btn-sm border border-dark"
+                                    href="{{ route('instrutores.index') }}" role="button">Cancelar</a>
+                                        <div class="col-2"></div>                                    
                                 </div>
                             </form>
                         </div>

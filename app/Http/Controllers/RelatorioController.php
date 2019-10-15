@@ -28,8 +28,8 @@ class RelatorioController extends Controller
     public function show()
     {
 
-        $dIni=date_format(date_create($_GET["dataInicial"]),"d-m-Y");
-        $dFin=date_format(date_create($_GET["dataFinal"]),"d-m-Y");
+        $dIni=date_format(date_create($_GET["dataInicial"]),"d/m/Y");
+        $dFin=date_format(date_create($_GET["dataFinal"]),"d/m/Y");
 
 //        $pagamento = Pagamento::whereBetween('dataVenc', [date_create($_GET["dataInicial"]), date_create($_GET["dataFinal"])])->get();
         $pagamento = Pagamento::join('alunos', 'alunos.matricula', '=', 'pagamentos.aluno_matricula')

@@ -5,7 +5,7 @@
     @if (Auth::user()->Tipos == 'Recepcionista')
 
         <div align="center">
-         <h3 class="w-74" >Atualização de Instrutor</h3>
+         <h3 class="w-74" >Edição de Instrutor</h3>
             <div class="container col-7  bg-light"  >
                 <form action="{{ route('instrutores.update', ['instrutores'=>$instrutores->id_Instrutor]) }}" class="form-horizontal" method="POST" >
 
@@ -37,9 +37,9 @@
                                 <div class=" input-group mb-4">
                                     <div class="input-group">
                                         <span id="widthFix"  class="input-group-text">Tipo de Aula: </span>
-                                        <select value="{{ $instrutores->tp_Aula }}" name="Rua">
-                                            <option >Grupo</option>
+                                        <select value="{{ $instrutores->tp_Aula }}" name="tp_Aula">                                            
                                             <option >Musculação</option>
+                                            <option >Combo</option>
                                             <option >Grupo</option>
                                         </select>
                                     </div>

@@ -29,7 +29,7 @@
                                 <td>
                                     <div class="btn-group">
                                     <!-- Ações -->
-                                        <a class="btn text-dark" role="button" href="{{ route('instrutores.edit', ['instrutores'=> $instrutor->id_Instrutor]) }}">Atualizar</a>
+                                        <a class="btn btn-primary border border-light text-white" role="button" href="{{ route('instrutores.edit', ['instrutores'=> $instrutor->id_Instrutor]) }}">Editar</a>
 
 
                                             <!-- Botão de gatilho para a modal -->
