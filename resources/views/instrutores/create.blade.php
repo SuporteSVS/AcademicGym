@@ -41,9 +41,9 @@
                                     <div class="input-group mb-4">
                                         <span id="widthFix"  class="input-group-text">Tipo de Aula: </span>
                                         <select id="widthFix-select" name="tp_Aula" >
-                                            <option>Grupo</option>
-                                            <option>Musculação</option>
-                                            <option>Combo</option>
+                                            <option value="Musculação">Musculaçao</option>
+                                            <option value="Grupo">Grupo</option>                                            
+                                            <option value="Combo">Combo</option>
                                         </select>
                                     </div>
                                 </div>

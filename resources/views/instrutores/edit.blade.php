@@ -35,13 +35,25 @@
                                     </div>
                                 </div>
                                 <div class=" input-group mb-4">
+                                <?php $tipo_Aula = ($instrutores->tp_Aula) ?>
                                     <div class="input-group">
                                         <span id="widthFix"  class="input-group-text">Tipo de Aula: </span>
-                                        <select value="{{ $instrutores->tp_Aula }}" name="tp_Aula">                                            
-                                            <option >Musculação</option>
-                                            <option >Combo</option>
-                                            <option >Grupo</option>
+                                        <select  name="tp_Aula"> 
+                                        @if ($tipo_Aula == 'Musculação')                                      
+                                            <option value="Musculação" selected>Musculação</option>
+                                            <option value="Grupo">Grupo</option>
+                                            <option value="Combo">Combo</option>
+                                        @elseif ($tipo_Aula == 'Combo')                                      
+                                            <option value="Musculação">Musculação</option>
+                                            <option value="Grupo">Grupo</option>
+                                            <option value="Combo" selected>Combo</option>
+                                        @else                                        
+                                            <option value="Musculação">Musculação</option>
+                                            <option value="Grupo" selected>Grupo</option>
+                                            <option value="Combo">Combo</option>
+                                        @endif
                                         </select>
+
                                     </div>
                                 </div>
                                 <div class="row ">
